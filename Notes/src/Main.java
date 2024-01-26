@@ -25,6 +25,20 @@ public class Main {
         // Boolean type variables______________________________________________
         boolean tired = true; // Has one byte, stores true/false
 
+        // Strings______________________________________________________________________________________________________
+        String name = "Klayton ";
+        String name2 = "Someone \"Else\""; // Use \ to add special characters
+        String combine = name + " " + name2; // Concatenate strings using "+"
+        String replaced = name.replace("K", "C"); // Replaces first argument with the second
+        String uppercase = name.toUpperCase(); // Returns string but uppercase
+        String lowercase = name.toLowerCase(); // Returns string but lowercase
+        String trimmed = name.trim(); // Returns string without added white space on the ends
+        boolean checkEnd = name.endsWith("on"); // Returns true if string ends with given arguments, false if not
+        boolean checkStart = name.startsWith("K"); // Returns true if string starts with given arguments, false if not
+        int checkIndex = name.indexOf("K"); // Returns the index of the given argument
+        int checkLength = name.length(); // Returns the length of the string
+
+
         // General Notes________________________________________________________________________________________________
 
         // You only need to define the variable type when initializing
