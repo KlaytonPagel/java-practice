@@ -68,6 +68,24 @@ public class Main {
             System.out.println(num2 + " is bigger than " + num1);
         }
 
+        // Loops________________________________________________________________________________________________________
+        // While loop___________________________________________________________
+        // Loops through statements enclosed in loop until the condition returns false
+        while (num1 > 0) {
+            System.out.println(num1);
+            num1--;
+        }
+        // For loop____________________________________________________________
+        // Loops for a specified number of times
+        for (int index = 0; index < 10; index++) {
+            System.out.println("Count" + index);
+            // if statement to check condition of the loop
+            if (index == 5){
+                break; // Breaks out of the loop
+            System.out.println("Next");
+            }
+        }
+
         // Switch statements____________________________________________________________________________________________
         int gameState = 2;
         // Switch sets different outputs depending on a determined number
