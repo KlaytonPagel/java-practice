@@ -38,6 +38,21 @@ public class Main {
         int checkIndex = name.indexOf("K"); // Returns the index of the given argument
         int checkLength = name.length(); // Returns the length of the string
 
+        // Operators____________________________________________________________________________________________________
+        int num1 = 20;
+        int num2 = 10;
+        int theSum = num1 + num2; // Adding numbers
+        int theDifference = num1 - num2; // Subtracting numbers
+        int theProduct = num1 * num2; // Multiplying numbers
+        int theQuotient = num1 / num2; // Dividing numbers
+        num1 ++; // Increments the number up by one
+        num2 --; // Decrements the number down by one
+        int theModulus = num1 % num2; // Returns the modulus (the remainder of the division)
+        boolean isEqual = num1 == num2; // Returns true if the values are equal
+        boolean notEqual = num1 != num2; // Returns true if the values are not equal
+        boolean isGreater = num1 > num2; // Returns true if the first value is greater
+        boolean isLesser = num1 < num2; // Returns true if the first value is lesser
+        System.out.println(theModulus);
 
         // General Notes________________________________________________________________________________________________
 
