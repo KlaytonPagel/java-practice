@@ -54,6 +54,20 @@ public class Main {
         boolean isLesser = num1 < num2; // Returns true if the first value is lesser
         System.out.println(theModulus);
 
+        // Conditional Statements_______________________________________________________________________________________
+        // Runs the lines in the curly braces if the statement in the parenthesis returns true
+        if (num1 > num2) {
+            System.out.println(num1 + " is bigger than " + num2);
+        }
+        // Runs lines in curly braces if the previous "if" statements don't run and the condition returns true
+        else if (cat == dog){
+            System.out.println(" ");
+        }
+        // Runs lines in curly braces if the previous "if" statements don't run
+        else {
+            System.out.println(num2 + " is bigger than " + num1);
+        }
+
         // General Notes________________________________________________________________________________________________
 
         // You only need to define the variable type when initializing
