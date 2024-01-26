@@ -68,6 +68,23 @@ public class Main {
             System.out.println(num2 + " is bigger than " + num1);
         }
 
+        // Switch statements____________________________________________________________________________________________
+        int gameState = 2;
+        // Switch sets different outputs depending on a determined number
+        switch (gameState){
+            case 1: // if the given number is a one it will execute case one
+                System.out.println("game state is on");
+                break; // break leaves the current loop or function without running the rest of it
+            case 2:
+                System.out.println("Game state is paused");
+                break;
+            case 3:
+                System.out.println("Game state is off");
+                break;
+            default: // if the given case number is not any predetermined ones it will execute this default one
+                System.out.println("Game state has not been set");
+        }
+
         // General Notes________________________________________________________________________________________________
 
         // You only need to define the variable type when initializing
