@@ -2,11 +2,13 @@
 
 // Main class to store methods
 public class Main {
-
+    // Methods______________________________________________________________________________________________________
     // Methods use the Camel naming scheme
-    // Main method to show examples and explanations
-    public static void main(String[] args){
+    public static void thisIsMethod() {
+        System.out.println("When you call this method I run");
+    }
 
+    public static void primitiveVariables() {
         // Primitive variable types_____________________________________________________________________________________
 
         // Integer type variables______________________________________________
@@ -24,7 +26,9 @@ public class Main {
 
         // Boolean type variables______________________________________________
         boolean tired = true; // Has one byte, stores true/false
+    }
 
+    public static void stringVariables() {
         // Strings______________________________________________________________________________________________________
         String name = "Klayton ";
         String name2 = "Someone \"Else\""; // Use \ to add special characters
@@ -37,7 +41,9 @@ public class Main {
         boolean checkStart = name.startsWith("K"); // Returns true if string starts with given arguments, false if not
         int checkIndex = name.indexOf("K"); // Returns the index of the given argument
         int checkLength = name.length(); // Returns the length of the string
+    }
 
+    public static void operators() {
         // Operators____________________________________________________________________________________________________
         int num1 = 20;
         int num2 = 10;
@@ -45,32 +51,42 @@ public class Main {
         int theDifference = num1 - num2; // Subtracting numbers
         int theProduct = num1 * num2; // Multiplying numbers
         int theQuotient = num1 / num2; // Dividing numbers
-        num1 ++; // Increments the number up by one
-        num2 --; // Decrements the number down by one
+        num1++; // Increments the number up by one
+        num2--; // Decrements the number down by one
         int theModulus = num1 % num2; // Returns the modulus (the remainder of the division)
         boolean isEqual = num1 == num2; // Returns true if the values are equal
         boolean notEqual = num1 != num2; // Returns true if the values are not equal
         boolean isGreater = num1 > num2; // Returns true if the first value is greater
         boolean isLesser = num1 < num2; // Returns true if the first value is lesser
         System.out.println(theModulus);
+    }
 
+    public static void conditions() {
         // Conditional Statements_______________________________________________________________________________________
         // Runs the lines in the curly braces if the statement in the parenthesis returns true
+        int num1 = 20;
+        int num2 = 10;
+        float dog = 4.4f;
+        double cat = 8.8;
         if (num1 > num2) {
             System.out.println(num1 + " is bigger than " + num2);
         }
         // Runs lines in curly braces if the previous "if" statements don't run and the condition returns true
-        else if (cat == dog){
+        else if (cat == dog) {
             System.out.println(" ");
         }
         // Runs lines in curly braces if the previous "if" statements don't run
         else {
             System.out.println(num2 + " is bigger than " + num1);
         }
+    }
 
+    public static void loops() {
         // Loops________________________________________________________________________________________________________
         // While loop___________________________________________________________
         // Loops through statements enclosed in loop until the condition returns false
+        int num1 = 20;
+        int num2 = 10;
         while (num1 > 0) {
             System.out.println(num1);
             num1--;
@@ -85,13 +101,16 @@ public class Main {
             }
             System.out.println("Next");
         }
+    }
+
+    public static void arrays() {
         // Arrays_______________________________________________________________________________________________________
         // Define array type then variable then the items you wish to store in the array
-        String[] names = { "John", "Carol", "Ted"}; // String[] makes an array for strings, Arrays have a fixed size
+        String[] names = {"John", "Carol", "Ted"}; // String[] makes an array for strings, Arrays have a fixed size
         System.out.println(names[0]); // Access individual parts of the array using its index
-        int[][] grid = {{0,1,2,3},
-                        {0,1,2,3},
-                        {0,1,2,3}}; // Add multiple dimensions to the array by adding more brackets
+        int[][] grid = {{0, 1, 2, 3},
+                {0, 1, 2, 3},
+                {0, 1, 2, 3}}; // Add multiple dimensions to the array by adding more brackets
         System.out.println(grid[0][2]); // Access multidimensional array using both indexes
 
         // Loop through each item in an array
@@ -104,11 +123,13 @@ public class Main {
                 System.out.println(grid[tileX][tileY]);
             }
         }
+    }
 
+    public static void switchStatements() {
         // Switch statements____________________________________________________________________________________________
         int gameState = 2;
         // Switch sets different outputs depending on a determined number
-        switch (gameState){
+        switch (gameState) {
             case 1: // if the given number is a one it will execute case one
                 System.out.println("game state is on");
                 break; // break leaves the current loop or function without running the rest of it
@@ -121,7 +142,9 @@ public class Main {
             default: // if the given case number is not any predetermined ones it will execute this default one
                 System.out.println("Game state has not been set");
         }
+    }
 
+    public static void generalNotes() {
         // General Notes________________________________________________________________________________________________
 
         // You only need to define the variable type when initializing
@@ -134,5 +157,11 @@ public class Main {
 
         // Displays an output to the user
         System.out.println(largeNumber);
+    }
+
+    // Main method run automatically when file runs
+    public static void main(String[] args) {
+        // You can call the other methods from inside the main method
+        thisIsMethod();
     }
 }
