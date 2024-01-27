@@ -8,6 +8,33 @@ public class Main {
         System.out.println("When you call this method I run");
     }
 
+    public  static void printName(String firstName) { // you can give the method parameters to pass in
+        System.out.println(firstName); // you can use the argument passed through the parameter as a variable
+    }
+
+    public static void ageAndName(int age, String firstName) { // You can ask for multiple parameters
+        System.out.println("My name is " + firstName + " My age is " + age);
+    }
+
+    static int addition(int num1, int num2) { // you can set the variable type and return a value from the method
+        return num1 + num2; // the return statement returns the value to where the method was called from
+    }
+    // Method overloading is making the same method, but for different variable types
+    static double addition(double num1, double num2) { // this is the same method as the previous, but it uses doubles
+        return num1 + num2;
+    }
+
+    public static void countDown(int count) {
+        if (count > 0){
+            System.out.println(count);
+            count--;
+            countDown(count); // recursion is calling a method inside of self
+        }
+        else {
+            System.out.println("countdown complete");
+        }
+    }
+
     public static void primitiveVariables() {
         // Primitive variable types_____________________________________________________________________________________
 
@@ -163,5 +190,10 @@ public class Main {
     public static void main(String[] args) {
         // You can call the other methods from inside the main method
         thisIsMethod();
+        printName("Klayton");
+        ageAndName(20, "Klayton");
+        System.out.println(addition(2, 3)); // you can call methods as the argument for other method calls
+        System.out.println(addition(2.0, 3.0)); // calls the double version of the addition method
+        countDown(3);
     }
 }
