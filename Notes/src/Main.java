@@ -80,9 +80,28 @@ public class Main {
         for (int index = 0; index < 10; index++) {
             System.out.println("Count" + index);
             // if statement to check condition of the loop
-            if (index == 5){
+            if (index == 5) {
                 break; // Breaks out of the loop
+            }
             System.out.println("Next");
+        }
+        // Arrays_______________________________________________________________________________________________________
+        // Define array type then variable then the items you wish to store in the array
+        String[] names = { "John", "Carol", "Ted"}; // String[] makes an array for strings, Arrays have a fixed size
+        System.out.println(names[0]); // Access individual parts of the array using its index
+        int[][] grid = {{0,1,2,3},
+                        {0,1,2,3},
+                        {0,1,2,3}}; // Add multiple dimensions to the array by adding more brackets
+        System.out.println(grid[0][2]); // Access multidimensional array using both indexes
+
+        // Loop through each item in an array
+        for (String person : names) {
+            System.out.println(person);
+        }
+        // Loop through each item in multidimensional array
+        for (int tileX = 0; tileX < grid.length; tileX++) {
+            for (int tileY = 0; tileY < grid[tileX].length; tileY++) {
+                System.out.println(grid[tileX][tileY]);
             }
         }
 
