@@ -1,5 +1,4 @@
 // Notes, explanations, and examples about different subjects
-
 // Main class to store methods
 public class Main {
     // Methods______________________________________________________________________________________________________
@@ -53,6 +52,8 @@ public class Main {
 
         // Boolean type variables______________________________________________
         boolean tired = true; // Has one byte, stores true/false
+
+        final int unchangeable = 10; // Final means you are unable to change the variable value later
     }
 
     public static void stringVariables() {
@@ -195,5 +196,9 @@ public class Main {
         System.out.println(addition(2, 3)); // you can call methods as the argument for other method calls
         System.out.println(addition(2.0, 3.0)); // calls the double version of the addition method
         countDown(3);
+
+        // Initialize an object of a class
+        SecondClass numbers = new SecondClass(); // Classes are usually stored in a new java file with the same name
+        System.out.println(numbers.num2); // to access an attribute of the class you use object.attribute
     }
 }
