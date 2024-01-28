@@ -2,19 +2,20 @@ import java.util.Scanner;
 
 public class Calculator {
     Stack stack;
-    boolean running;
     Scanner input;
     String state;
-    String[] operators = {"+", "-", "/", "*"};
+    String[] operators;
+
 
     // Constructor to initialize the calculator_________________________________________________________________________
     Calculator(){
         stack = new Stack();
         input = new Scanner(System.in);
-        startupMessage();
         state = "operand";
+        operators = new String[]{"+", "-", "/", "*"};
+
+        startupMessage();
         userInput();
-        stack.display();
     }
 
     // display the initial program to the user and explain how it works_________________________________________________
@@ -29,7 +30,8 @@ public class Calculator {
         while (true){
             System.out.print(">> ");
             String entry = this.input.next();
-            if (entry.equals("q")){ // If user enters "q" end the program
+            if (entry.equals("q")){ // If user enters "q" end the program and display final total
+                System.out.println("Your End Total is " + this.stack.pop());
                 break;
             }
             // Checks if the operand is valid and asks for a new one if it isn't
