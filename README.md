@@ -24,3 +24,16 @@ I started making my own version of an array based stack data structure.
 So far my Stack class has methods for pushing, poping, getting the length, increasing the size. 
 I overloaded the push method so the user can push different variable types.
 Still working on making the stack return different vaiable types when popped.
+
+1/28/2024
+- Added a few notes
+- Altered the Stack class
+- created a Calculator
+
+Couldn't figure out a way to have the stack return different variable types.
+I determined it was unessisary and I could convert it when needed when the stack is actually used.
+
+I added a section to the notes for user input and the "and" and "or" operator types.
+
+Created a new class for a calculator. the calculator takes one input per line and calculates as the user inputs.
+I use different methods to verify the users inputs are valid and have them enter a new input if not.
