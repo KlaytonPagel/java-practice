@@ -34,6 +34,12 @@ public class Calculator {
             }
             // Checks if the operand is valid and asks for a new one if it isn't
             else if (this.state.equals("operand")){
+                boolean valid = verifyOperand(entry);
+                while (!valid){
+                    System.out.print("You have entered an invalid number, Please try again\n>> ");
+                    entry = this.input.next();
+                    valid = verifyOperand(entry);
+                }
                 this.state = "operator";
             }
             // Checks if the operator is valid and gets a new input if it isn't
@@ -50,13 +56,23 @@ public class Calculator {
             this.stack.push(entry);
         }
     }
-    // Method to check if an operator is actually_______________________________________________________________________
+    // Method to check if an operator is valid__________________________________________________________________________
     public boolean verifyOperator(String entry){
         for (String operator : this.operators){
             if (entry.equals(operator)){
                 return true;// Returns true if an operator is in the operators array
             }
         }
-        return false;
+        return false;// Returns false if the operator isn't in the array
+    }
+    // Method to check if an operand is valid___________________________________________________________________________
+    public boolean verifyOperand(String entry){
+        try {
+            Integer.valueOf(entry);
+            return true;// if the value can be converted to and integer return true
+        }
+        catch (Exception e){
+            return false;// if the value can't be converted to an integer return false
+        }
     }
 }
