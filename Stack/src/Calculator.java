@@ -21,7 +21,7 @@ public class Calculator {
     public void startupMessage(){
         System.out.println("This is a calculator program, please use one entry per line and \"q\"");
         System.out.println("I will show you the current total after each number entry Example:");
-        System.out.println(">> 2\n>> +\n>> 2\n Total:4\n>> +\n>> 2\nTotal:6\n>> q\nYour end total is 6");
+        System.out.println(">> 2\n>> +\n>> 2\n Total:4\n>> +\n>> 2\nTotal:6\n>> q\nYour end total is 6\n_____________");
     }
 
     // Loops through to gather user input_______________________________________________________________________________
@@ -54,7 +54,51 @@ public class Calculator {
             }
             // Add the users entry to the stack
             this.stack.push(entry);
+
+            // If the stack has two operands, calculate
+            if (this.stack.length() >= 3){
+                checkCalculation();
+            }
         }
+    }
+    // Check what type of calculation needs to be done__________________________________________________________________
+    public void checkCalculation(){
+        double num1 = Double.valueOf(this.stack.pop());
+        String operator = this.stack.pop();
+        double num2 = Double.valueOf(this.stack.pop());
+        double total = 0;
+        // Check the operator and call it's respective function
+        if (operator.equals("+")){
+            total = add(num1, num2);
+        }
+        else if (operator.equals("-")){
+            total = subtract(num1, num2);
+        }
+        else if (operator.equals("*")) {
+            total = multiply(num1, num2);
+        }
+        else if (operator.equals("/")) {
+            total = divide(num1, num2);
+        }
+        // Add the total as the bottom of the stack and show the current total to the user
+        this.stack.push(total);
+        System.out.println("Total: " + total);
+    }
+    // Add the two numbers______________________________________________________________________________________________
+    public double add(double num1, double num2){
+        return num2 + num1;
+    }
+    // Subtract the two numbers_________________________________________________________________________________________
+    public double subtract(double num1, double num2){
+        return num2 - num1;
+    }
+    // Multiply the two numbers_________________________________________________________________________________________
+    public double multiply(double num1, double num2){
+        return num2 * num1;
+    }
+    // Divide the two numbers___________________________________________________________________________________________
+    public double divide(double num1, double num2){
+        return num2 / num1;
     }
     // Method to check if an operator is valid__________________________________________________________________________
     public boolean verifyOperator(String entry){
@@ -68,7 +112,7 @@ public class Calculator {
     // Method to check if an operand is valid___________________________________________________________________________
     public boolean verifyOperand(String entry){
         try {
-            Integer.valueOf(entry);
+            Double.valueOf(entry);
             return true;// if the value can be converted to and integer return true
         }
         catch (Exception e){

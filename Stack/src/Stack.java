@@ -39,7 +39,7 @@ public class Stack {
         }
     }
     // Adds a float to the stack________________________________________________________________________________________
-    public void push(float element){
+    public void push(double element){
         // iterates through the stack to find the next open slot and puts the item their
         for (int index = 0; index < container.length; index++){
             if (container[index] == null){
