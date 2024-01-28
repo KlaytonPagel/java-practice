@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Notes, explanations, and examples about different subjects
 // Main class to store methods
 public class Main {
@@ -97,6 +99,8 @@ public class Main {
         boolean notEqual = num1 != num2; // Returns true if the values are not equal
         boolean isGreater = num1 > num2; // Returns true if the first value is greater
         boolean isLesser = num1 < num2; // Returns true if the first value is lesser
+        boolean or = num1 < num2 || num2 < num1; // returns true if either side returns true
+        boolean and = num1 < num2 && num1 > 5; // returns true if both sides return true
         System.out.println(theModulus);
     }
 
@@ -198,6 +202,14 @@ public class Main {
         System.out.println(largeNumber);
     }
 
+    public static void userInput() {
+        // User Input___________________________________________________________________________________________________
+        Scanner inputScanner = new Scanner(System.in);
+        System.out.print("Enter something and it will be showed back to you >>> ");
+        String input = inputScanner.next(); // reads the user input and stores it in a variable
+        System.out.println(input);
+    }
+
     // Main method run automatically when file runs
     public static void main(String[] args) {
         // You can call the other methods from inside the main method
@@ -211,6 +223,7 @@ public class Main {
         // Initialize an object of a class
         SecondClass numbers = new SecondClass(); // Classes are usually stored in a new java file with the same name
         System.out.println(numbers.num2); // to access an attribute of the class you use object.attribute
-        System.out.println(divide(10, 0));
+        userInput();
+
     }
 }

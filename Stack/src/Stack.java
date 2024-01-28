@@ -75,12 +75,15 @@ public class Stack {
         return size;
         }
 
+    // Increase the size of the stack___________________________________________________________________________________
     public void increaseSize(){
         maxSize += 5;
+        // Create a new array that is 5 spots bigger, then move everything over to the new one
         String[] newContainer = new String[maxSize];
         for (int index = 0; index < container.length; index++){
             newContainer[index] = container[index];
         }
+        // set the old container to the new container
         container = newContainer;
     }
     }
