@@ -14,12 +14,36 @@ public class Stack {
             }
         }
     }
-    // adds an item to the stack________________________________________________________________________________________
+    // adds a string to the stack_______________________________________________________________________________________
     public void push(String element){
         // iterates through the stack to find the next open slot and puts the item their
         for (int index = 0; index < container.length; index++){
             if (container[index] == null){
-                container[index] = element;
+                container[index] = (element);
+                // increase the size of the stack if it reaches the max size
+                if (this.length() == maxSize){this.increaseSize();}
+                break;
+            }
+        }
+    }
+    // Adds an integer to the stack_____________________________________________________________________________________
+    public void push(int element){
+        // iterates through the stack to find the next open slot and puts the item their
+        for (int index = 0; index < container.length; index++){
+            if (container[index] == null){
+                container[index] = (String.valueOf(element));
+                // increase the size of the stack if it reaches the max size
+                if (this.length() == maxSize){this.increaseSize();}
+                break;
+            }
+        }
+    }
+    // Adds a float to the stack________________________________________________________________________________________
+    public void push(float element){
+        // iterates through the stack to find the next open slot and puts the item their
+        for (int index = 0; index < container.length; index++){
+            if (container[index] == null){
+                container[index] = (String.valueOf(element));
                 // increase the size of the stack if it reaches the max size
                 if (this.length() == maxSize){this.increaseSize();}
                 break;
