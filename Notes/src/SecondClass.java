@@ -4,6 +4,9 @@ public class SecondClass {
     public String publicString = "public"; // Public makes the variable visible within the project
     private String privateString = "private"; // Private makes the variable visible to its class only
     protected String protectedString = "protected"; // Protected makes the variable visible to subclasses
+    //__________________________________________________________________________________________________________________
+
+    static int staticNumber; // static means that variable or method is shared between all instances of the class
     int num1;
     int num2;
 

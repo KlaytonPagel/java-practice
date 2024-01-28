@@ -19,8 +19,19 @@ public class Main {
         return num1 + num2; // the return statement returns the value to where the method was called from
     }
     // Method overloading is making the same method, but for different variable types
+    // Method overloading requires that you use the static modifier
     static double addition(double num1, double num2) { // this is the same method as the previous, but it uses doubles
         return num1 + num2;
+    }
+
+    public static int divide(int num1, int num2) {
+        try { // Try with try to attempt to run the following code
+            int dividedNumber = num1 / num2;
+            return dividedNumber;
+        }
+        catch (Exception e) { // catch will run the following code if the attempted code cannot run
+            throw new ArithmeticException("Cannot Be Divided"); // throw shows an error in the console
+        }
     }
 
     public static void countDown(int count) {
@@ -200,5 +211,6 @@ public class Main {
         // Initialize an object of a class
         SecondClass numbers = new SecondClass(); // Classes are usually stored in a new java file with the same name
         System.out.println(numbers.num2); // to access an attribute of the class you use object.attribute
+        System.out.println(divide(10, 0));
     }
 }
