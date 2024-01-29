@@ -9,7 +9,7 @@ public class Main {
         System.out.println("When you call this method I run");
     }
 
-    public  static void printName(String firstName) { // you can give the method parameters to pass in
+    public static void printName(String firstName) { // you can give the method parameters to pass in
         System.out.println(firstName); // you can use the argument passed through the parameter as a variable
     }
 
