@@ -37,3 +37,11 @@ I added a section to the notes for user input and the "and" and "or" operator ty
 
 Created a new class for a calculator. the calculator takes one input per line and calculates as the user inputs.
 I use different methods to verify the users inputs are valid and have them enter a new input if not.
+
+1/29/2024
+- Started password checker
+- started spring boot
+
+I started a password checker class, The idea is to take an inputted string and see if it meets your password requirements.
+
+I started the basics of a spring boot API. I was able to create a basic hello world program.
