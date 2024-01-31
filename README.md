@@ -45,3 +45,9 @@ I use different methods to verify the users inputs are valid and have them enter
 I started a password checker class, The idea is to take an inputted string and see if it meets your password requirements.
 
 I started the basics of a spring boot API. I was able to create a basic hello world program.
+
+1/30/2024
+- Finished password checker
+
+I added methods for checking different aspects of a password.
+There are methods for checking the length, if the passwrod contains an Uppercase character, a number, and a special character, if the password has a number of the same character types in a row, and to check and see if the password is in a wordlist of common passwords.
