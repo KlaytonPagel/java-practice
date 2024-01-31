@@ -144,6 +144,12 @@ public class Main {
             }
             System.out.println("Next");
         }
+        // Simple for loop_____________________________________________________
+        // Loops through each item in the array
+        String[] names = {"Tom", "Ted", "Tim"};
+        for (String name : names){
+            System.out.println(name);
+        }
     }
 
     public static void arrays() {
