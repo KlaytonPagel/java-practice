@@ -69,4 +69,22 @@ public class PasswordChecker {
         }
         return true;
     }
+
+    // Checks if the password contains at least one of each value type__________________________________________________
+    public boolean checkContains(String password){
+        boolean digit = false;
+        boolean letter = false;
+        boolean special = false;
+        for (int index = 0; index < password.length(); index++) {
+            if (Character.isDigit(password.charAt(index))){
+                digit = true;
+            } else if (Character.isLetter(password.charAt(index))) {
+                letter = true;
+            } else {
+                special = true;
+            }
+        }
+        if (digit && letter && special){return true;}
+        return false;
+    }
 }
