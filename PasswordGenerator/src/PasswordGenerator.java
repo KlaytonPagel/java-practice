@@ -61,6 +61,6 @@ public class PasswordGenerator {
                 this.password += this.specials.charAt(random.nextInt(this.specials.length()));
             }
         }
-        System.out.println(this.password);
+        System.out.println("Your password is:\n" + this.password);
     }
 }
