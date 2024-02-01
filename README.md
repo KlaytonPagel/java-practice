@@ -51,3 +51,10 @@ I started the basics of a spring boot API. I was able to create a basic hello wo
 
 I added methods for checking different aspects of a password.
 There are methods for checking the length, if the passwrod contains an Uppercase character, a number, and a special character, if the password has a number of the same character types in a row, and to check and see if the password is in a wordlist of common passwords.
+
+1/31/2024
+- Created password generator
+
+Started and finished a password generator.
+The generator randomly picks weather the nex character will be a letter, digit, or special character.
+if it picks a letter is will randomly decide weather to make it uppercase or use lowercase.
