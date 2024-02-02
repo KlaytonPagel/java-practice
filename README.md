@@ -58,3 +58,9 @@ There are methods for checking the length, if the passwrod contains an Uppercase
 Started and finished a password generator.
 The generator randomly picks weather the nex character will be a letter, digit, or special character.
 if it picks a letter is will randomly decide weather to make it uppercase or use lowercase.
+
+2/1/2024
+- Started working with JFrame
+
+Made a project for for working with swings JFrames.
+Created basic class for displaying a window.
